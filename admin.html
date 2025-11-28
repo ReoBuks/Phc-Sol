@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - PHC Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>Admin Dashboard</h2>
+    <nav>
+        <a href="services.html">View Services</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+</header>
+
+<h2>Create New Service</h2>
+
+<div class="form-container">
+    <input id="title" placeholder="Service title">
+    <input id="category" placeholder="Category">
+    <textarea id="summary" placeholder="Short summary"></textarea>
+
+    <button onclick="createService()">Add Service</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+
+<script>
+// For now: admin UI only — backend will be connected via Edge Functions later.
+function createService() {
+    alert("Admin backend will be added next.");
+}
+
+document.getElementById("logoutBtn").onclick = logout;
+</script>
+
+</body>
+</html>
