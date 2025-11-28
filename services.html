@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Services - PHC Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2>PHC SOLUTIONS</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+</header>
+
+<h1>Our Services</h1>
+<div id="services"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+
+<script>
+document.getElementById("logoutBtn").onclick = logout;
+
+async function loadServices() {
+    const services = await fetchServices();
+    const container = document.getElementById("services");
+
+    container.innerHTML = services.map(s => `
+        <div class="card">
+            <h3>${s.title}</h3>
+            <p><strong>Category:</strong> ${s.category}</p>
+            <p>${s.summary}</p>
+            <button onclick="apply('${s.id}')">Apply / Enquire</button>
+        </div>
+    `).join("");
+}
+
+async function apply(id) {
+    const message = prompt("Write a message about your request:");
+    if (message) applyForService(id, message);
+}
+
+loadServices();
+</script>
+</body>
+</html>
