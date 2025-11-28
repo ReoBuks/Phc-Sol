@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard - PHC Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>User Dashboard</h2>
+    <nav>
+        <a href="services.html">Services</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+</header>
+
+<h2>Welcome to your dashboard</h2>
+<p>You can browse services or track your applications.</p>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="app.js"></script>
+
+<script>
+document.getElementById("logoutBtn").onclick = logout;
+</script>
+
+</body>
+</html>
