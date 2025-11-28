@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background: black;
+    padding: 10px 20px;
+    color: white;
+}
+
+nav a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+.form-container input,
+.form-container textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+}
